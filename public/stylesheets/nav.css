@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Header/Nav Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  background-color: #e60023;
+  color: white;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+ padding-right:20px ;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin-left: 20px;
+  font-family:  Calibri,"Gilroy", sans-serif;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Calibri, "Gilroy","sans-serif";
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: rgb(190, 180, 180);
+}
+
+/* Optional: Add a search bar style if needed */
+.search-bar {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo {
+      margin-bottom: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+      margin-left: 0;
+  }
+
+  .search-bar {
+      margin: 10px 0;
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+      height: 30px;
+  }
+
+  nav ul li a {
+      font-size: 0.875rem; /* Smaller font size for smaller screens */
+  }
+
+  .search-bar input {
+      padding: 5px;
+  }
+}

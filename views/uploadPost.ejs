@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+  <link rel="stylesheet" href="/stylesheets/nav.css">
+  <link rel="stylesheet" href="/stylesheets/upload.css">
+  
+</head>
+<body>
+    <%-include("./components/nav") %>
+    <div class="body">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="file">
+        <input type="text" name="caption" placeholder="Post text" class="input" required>
+        <button type="submit">Upload</button>
+    </form></div>
+</body>
+</html>

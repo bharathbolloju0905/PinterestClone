@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <style>
+  
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        width: 14rem; 
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        padding: 10px; 
+    }
+
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .card-text {
+        font-size: 0.875rem; /* Adjusted font size */
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        padding: 8px 12px;
+        text-decoration: none;
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .card {
+            width: 12rem; /* Adjusted width for tablets and smaller devices */
+        }
+
+        .card-body {
+            padding: 8px; /* Reduced padding */
+        }
+
+        .card-title {
+            font-size: 0.9rem; /* Slightly smaller font size */
+        }
+
+        .card-text {
+            font-size: 0.8rem; /* Slightly smaller font size */
+        }
+
+        .btn-primary {
+            padding: 6px 10px; /* Reduced padding */
+            font-size: 0.8rem; /* Slightly smaller font size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            width: 100%; /* Full width on very small screens */
+            max-width: 350px; /* Max width to prevent cards from being too large */
+        }
+
+        .card-body {
+            padding: 5px; /* Further reduced padding */
+        }
+
+        .card-title {
+            font-size: 0.875rem; /* Smaller font size */
+        }
+
+        .card-text {
+            font-size: 0.75rem; /* Smaller font size */
+        }
+
+        .btn-primary {
+            padding: 5px 8px; /* Further reduced padding */
+            font-size: 0.75rem; /* Smaller font size */
+        }
+    }
+</style>
+</head>
+<body>
+    <%-include("./components/nav") %>
+        <div class="container flex">
+            <%post.forEach((poster)=>{%>
+                <div class="card" >
+                    <img src="/images/uploads/<%=poster.image%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <strong>
+                                <%=poster.postText%>
+                            </strong>
+                        </h5>
+                        <p class="card-text">
+                            @<%=poster.user.username%>
+                        </p>
+                        <a href="/allposts/<%=poster._id%>" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+                <% }) %>
+
+        </div>
+</body>
+</html>

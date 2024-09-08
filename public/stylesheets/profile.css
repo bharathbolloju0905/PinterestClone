@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #e60023;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links a {
+    color: white;
+    font-size: 1.6rem;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+}
+
+.profile-card {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 0.3rem;
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card .image {
+    border-radius: 50%;
+    background-color: #4070f4;
+    height: 12rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem;
+    width: 12rem;
+}
+
+.image img {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    position: relative;
+}
+
+.profile-card .text-data {
+    text-align: center;
+}
+
+.edit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #867a7a;
+    color: black;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.btn2 {
+    width: 200px;
+    color: white;
+    background-color: red;
+    padding: 5px 2px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.text-data h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttons,
+form {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: #4070f4;
+    border-radius: 2.4rem;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.8rem 2.4rem;
+    margin-inline: 0.2rem;
+}
+
+.buttons button:hover {
+    background-color: #152551;
+}
+
+.profile-card .analytics {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.file {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-left: 8rem;
+}
+
+.input {
+    height: 3rem;
+    width: 20rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.analytics .data {
+    color: #333;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.data i {
+    font-size: 1.8rem;
+    margin-right: 0.3rem;
+}
+
+.data p {
+    font-size: 2rem;
+}
+
+/* Media Queries */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+    .navbar-links a {
+        font-size: 1.4rem;
+        margin-left: 15px;
+    }
+
+    .profile-card {
+        width: 24rem;
+    }
+
+    .profile-card .image {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .profile-card .text-data h2 {
+        font-size: 2rem;
+    }
+
+    .btn2 {
+        width: 180px;
+        font-size: 1.4rem;
+    }
+
+    .input {
+        width: 18rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links a {
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 90vw;
+        padding: 1rem;
+    }
+
+    .profile-card .image {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .profile-card .text-data h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn2 {
+        width: 160px;
+        font-size: 1.2rem;
+    }
+
+    .input {
+        width: 16rem;
+        font-size: 1.2rem;
+    }
+
+    .file {
+        margin-left: 0;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 370px) {
+    html {
+        font-size: 50%;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+    }
+
+    .profile-card .text-data h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn2 {
+        width: 140px;
+        font-size: 1rem;
+    }
+
+    .input {
+        width: 14rem;
+        font-size: 1rem;
+    }
+}
